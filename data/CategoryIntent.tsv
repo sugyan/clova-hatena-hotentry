@@ -1,0 +1,8 @@
+[INTENT SLOT]
+Category	CATEGORY_NAME
+
+[INTENT EXPRESSION]
+<Category>総合</Category>
+<Category>一般</Category>について
+<Category>世の中</Category>のこと
+<Category>政治と経済</Category>とか
