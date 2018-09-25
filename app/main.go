@@ -75,6 +75,11 @@ func hotentry(ctx context.Context, r *http.Request) (*cek.ResponseMessage, error
 				AddSpeechText("よく分かりませんでした。もう一回言ってください。", cek.SpeechInfoLangJA).
 				Build()).
 			Build(), nil
+	case *cek.SessionEndedRequest:
+		return cek.NewResponseBuilder().
+			OutputSpeech(cek.NewOutputSpeechBuilder().
+				Build()).
+			Build(), nil
 	default:
 		log.Warningf(ctx, "request: %v", request)
 		return nil, errors.New("Unknown request type")
